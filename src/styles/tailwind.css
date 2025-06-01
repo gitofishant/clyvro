@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --primary-background: #eff8f6;
+    --primary-foreground: #171717;
+    --primary-light: #ffffff;
+    --primary-dark: #e5e0d9;
+
+    /* Secondary Colors */
+    --secondary-background: #000000;
+    --secondary-foreground: #ffffff;
+    --secondary-light: #333333;
+    --secondary-dark: #000000;
+
+    /* Accent Colors */
+    --accent-color: #f20101;
+    --accent-foreground: #ffffff;
+    --accent-light: #ff3333;
+    --accent-dark: #cc0000;
+
+    /* Border Colors */
+    --border-primary: #000000;
+    --border-secondary: #e5e5e5;
+    --border-light: #f2f2f2;
+    --border-dark: #333333;
+  }
+}
+
+@layer utilities {
+  /* Background Color Utilities */
+  .bg-primary-beige {
+    background-color: var(--primary-background);
+  }
+
+  .bg-primary-light {
+    background-color: var(--primary-light);
+  }
+
+  .bg-primary-dark {
+    background-color: var(--primary-dark);
+  }
+
+  .bg-secondary-black {
+    background-color: var(--secondary-background);
+  }
+
+  .bg-secondary-light {
+    background-color: var(--secondary-light);
+  }
+
+  .bg-secondary-dark {
+    background-color: var(--secondary-dark);
+  }
+
+  .bg-accent {
+    background-color: var(--accent-color);
+  }
+
+  .bg-accent-light {
+    background-color: var(--accent-light);
+  }
+
+  .bg-accent-dark {
+    background-color: var(--accent-dark);
+  }
+
+  /* Text Color Utilities */
+  .text-primary-dark {
+    color: var(--primary-foreground);
+  }
+
+  .text-secondary-white {
+    color: var(--secondary-foreground);
+  }
+
+  .text-accent-red {
+    color: var(--accent-color);
+  }
+
+  /* Border Color Utilities */
+  .border-primary {
+    border-color: var(--border-primary);
+  }
+
+  .border-secondary {
+    border-color: var(--border-secondary);
+  }
+
+  .border-light {
+    border-color: var(--border-light);
+  }
+
+  .border-dark {
+    border-color: var(--border-dark);
+  }
+
+  /* Auto-scrolling carousel animation */
+  @keyframes scroll-carousel {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll-carousel {
+    animation: scroll-carousel 30s linear infinite;
+  }
+
+  /* Modal fade-in animation */
+  @keyframes fade-in-modal {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-fade-in-modal {
+    animation: fade-in-modal 0.3s ease-out;
+  }
+  
+}

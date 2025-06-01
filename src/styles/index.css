@@ -1,0 +1,93 @@
+@import './tailwind.css';
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+/* Global styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Manrope', sans-serif;
+  
+}
+@keyframes scroll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove focus outline for mouse users, keep for keyboard */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+#root {
+  height: 100%;
+}
+
+/* For debugging layout issues */
+.debug * {
+  outline: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Image optimizations */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Utility classes */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section-padding {
+  padding: 3rem 0;
+}
+
+@media (min-width: 640px) {
+  .section-padding {
+    padding: 4rem 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding: 5rem 0;
+  }
+}
