@@ -26,7 +26,8 @@ const Button = ({
     large: 'px-6 py-3.5 text-lg',
   };
   
-  const buttonClasses = `${baseClasses} ${variants[variant]} ${sizes[size]} ${disabled ? 'cursor-not-allowed' : ''} ${className}`;
+  const buttonClasses = `${baseClasses} ${sizes[size]} ${disabled ? 'cursor-not-allowed' : ''} ${className} ${!className && variants[variant]}`;
+
   
   return (
     <button

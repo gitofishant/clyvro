@@ -15,7 +15,7 @@ const PartnerBrands = () => {
   const scrollingBrands = [...brands, ...brands];
 
   return (
-    <section className="bg-white py-12 overflow-hidden">
+    <section className="bg-white py-12 overflow-hidden border-t border-b border-black">
       <div className="relative w-full">
         <div className="animate-scroll flex w-max gap-12">
           {scrollingBrands.map((brand, index) => (

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Accordion from '../../components/common/Accordion';
 
 const FaqSection = () => {
-  
   const faqItems = [
     {
       title: "What is Shopify and why should I use it for my online store?",
@@ -98,26 +97,31 @@ const FaqSection = () => {
 
   return (
     <section className="py-16 bg-white">
-      <div className="container mx-auto px-6">
+      <div className="w-full mx-auto px-4 sm:px-6 lg:px-12 max-w-[1440px]">
         <div className="flex justify-center mb-4">
-          <div className="bg-black text-white text-sm font-medium py-1.5 px-5 rounded-xl">
-            Find The Best Shopify Experts
+          <div className="bg-black text-base font-medium py-1.5 px-5 rounded-xl">
+            <span className="bg-gradient-to-r from-white via-green-300 to-white 
+                   bg-[length:200%_100%] bg-clip-text text-transparent 
+                   animate-shimmer inline-block">
+                  Find The Best Shopify Experts
+            </span>
           </div>
+
         </div>
-        
-        <h2 className="text-4xl font-normal text-center mb-4">
+
+        <h2 className="text-4xl sm:text-5xl font-normal text-center mb-4">
           Frequently Asked Questions
         </h2>
-        
-        <p className="text-lg text-center text-[#171717] mb-12 max-w-2xl mx-auto">
+
+        <p className="text-base sm:text-lg text-center text-[#171717] mb-12 max-w-2xl mx-auto">
           Find answers to common questions about our services, features, and how we can help you.
         </p>
-        
-        <div className="max-w-4xl mx-auto">
-          <Accordion 
+
+        <div className="max-w-6xl mx-auto">
+          <Accordion
             items={faqItems}
             className="bg-white rounded-lg"
-            itemClassName="mb-4 bg-white rounded-lg"
+            itemClassName="mb-0 bg-white rounded-lg"
             titleClassName="py-4 px-4 bg-white rounded-lg"
             contentClassName="px-4 pb-4 pt-0"
           />

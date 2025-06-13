@@ -5,126 +5,96 @@ import Button from '../ui/Button';
 const Footer = () => {
   const handleSubscribe = (e) => {
     e.preventDefault();
-    // Subscription logic would go here
     alert('Thank you for subscribing!');
   };
 
   return (
-    <footer className="bg-black text-white py-16">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Services Column */}
-          <div>
-            <h3 className="text-sm font-semibold mb-4">Our Services</h3>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-sm text-white hover:text-gray-300">Shopify Designing</a></li>
-              <li><a href="#" className="text-sm text-white underline hover:text-gray-300">3d Animation</a></li>
-              <li><a href="#" className="text-sm text-white underline hover:text-gray-300">Automation Solutions</a></li>
-              <li><a href="#" className="text-sm text-white underline hover:text-gray-300">Business Websites</a></li>
-              <li><a href="#" className="text-sm text-white underline hover:text-gray-300">Shopify White Labelling</a></li>
-            </ul>
+    <footer className="bg-black text-white py-8 px-6">
+      <div className="w-full-xl mx-auto max-w-[1440px]">
+        {/* Top Section with Flex Layout */}
+        <div className="flex flex-col md:flex-row md:justify-between items-start mb-16 gap-8">
+          {/* Left Side */}
+          <div className="flex flex-col sm:flex-row gap-8 text-sm flex-1">
+            <div className="text-center">
+              <h3 className="text-white text-lg">Our Services</h3>
+              <ul className="space-y-2 mt-2">
+                <li><a href="#" className="hover:underline text-white text-base">Shopify Designing</a></li>
+              </ul>
+            </div>
+            <div className="text-center">
+              <h3 className="text-white text-lg">Our Products</h3>
+              <ul className="space-y-2 mt-2">
+                <li><a href="#" className="hover:underline text-white text-base">Shopify Themes</a></li>
+              </ul>
+            </div>
+            <div className="text-center">
+              <h3 className="text-white text-lg">Portfolio</h3>
+              <ul className="space-y-2 mt-2">
+                <li><a href="#" className="hover:underline text-white text-base">Shopify Stores</a></li>
+              </ul>
+            </div>
           </div>
 
-          {/* Products Column */}
-          <div>
-            <h3 className="text-sm font-semibold mb-4">Our Products</h3>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-sm text-white hover:text-gray-300">Shopify Themes</a></li>
-            </ul>
-          </div>
+          {/* Right Side (Policies + Logo) */}
+          <div className="flex flex-col  md:flex-row items-start gap-20">
+            {/* Policies Section */}
+            <div className="text-center">
+              <h3 className="text-white text-lg">Policies</h3>
+              <ul className="space-y-2 mt-2 text-left">
+                <li><a href="#" className="hover:underline text-white text-base">Privacy Policy</a></li>
+                <li><a href="#" className="hover:underline text-white text-base">Terms Of Service</a></li>
+                <li><a href="#" className="hover:underline text-white text-base">Refund Policy</a></li>
+                <li><a href="#" className="hover:underline text-white text-base">About Us</a></li>
+              </ul>
+            </div>
 
-          {/* Portfolio Column */}
-          <div>
-            <h3 className="text-sm font-semibold mb-4">Portfolio</h3>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-sm text-white hover:text-gray-300">Shopify Stores</a></li>
-              <li><a href="#" className="text-sm text-white underline hover:text-gray-300">3d Product</a></li>
-              <li><a href="#" className="text-sm text-white underline hover:text-gray-300">Business Websites</a></li>
-            </ul>
-          </div>
-
-          {/* Policies Column */}
-          <div>
-            <h3 className="text-sm font-semibold mb-4">Policies</h3>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-sm text-white underline hover:text-gray-300">Privacy Policy</a></li>
-              <li><a href="#" className="text-sm text-white underline hover:text-gray-300">Terms Of Service</a></li>
-              <li><a href="#" className="text-sm text-white underline hover:text-gray-300">Refund Policy</a></li>
-              <li><a href="#" className="text-sm text-white hover:text-gray-300">About Us</a></li>
-            </ul>
+            {/* Logo */}
+            <div className="self-start">
+              <img src="/images/shoplogo.jpg" alt="Logo" className="h-28 md:h-32" />
+            </div>
           </div>
         </div>
 
-        <div className="mt-8">
-          <img src="/images/shoplogo.jpg" alt="Logo" className="h-28" />
-        </div>
+        <hr className="border-white-600 my-8" />
 
-        <hr className="border-gray-600 my-8" />
-
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-          <div className="mb-4 md:mb-0">
-            <p className="text-gray-400 text-sm">mailbox@mail.com</p>
-          </div>
-
-          <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
-            <form onSubmit={handleSubscribe} className="flex">
-              <InputField
+        {/* Subscribe Section */}
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 w-full">
+          <div className="flex flex-col md:flex-row md:items-center w-full md:w-2/3">
+            <form onSubmit={handleSubscribe} className="flex w-full max-w-xl">
+              <input
                 type="email"
-                placeholder="Your email"
-                className="rounded-r-none"
+                placeholder="mailbox@mail.com"
                 required
+                className="w-full px-4 py-2 text-sm bg-black border border-white text-white rounded-l-md placeholder-white focus:outline-none"
               />
-              <Button
+              <button
                 type="submit"
-                className="bg-black text-black font-semibold rounded-l-none"
+                className="px-5 py-2 text-sm font-medium text-black bg-white rounded-r-md"
               >
                 Subscribe
-              </Button>
+              </button>
             </form>
-            <p className="text-sm text-white max-w-md">
+            <p className="text-sm text-white ml-4 mt-4 md:mt-0 max-w-xs">
               No spam, notifications only about new products, updates and freebies. You can always unsubscribe.
             </p>
           </div>
 
-          <div className="flex space-x-2 mt-4 md:mt-0">
-            <a href="#" className="bg-white rounded-full w-9 h-9 flex items-center justify-center">
-              <svg className="w-4 h-4" viewBox="0 0 16 16" fill="currentColor">
-                <use href="img_component_1_11.svg#icon" />
-              </svg>
-            </a>
-            <a href="#" className="bg-white rounded-full w-9 h-9 flex items-center justify-center">
-              <svg className="w-4 h-4" viewBox="0 0 16 16" fill="currentColor">
-                <use href="img_component_1_12.svg#icon" />
-              </svg>
-            </a>
-            <a href="#" className="bg-white rounded-full w-9 h-9 flex items-center justify-center">
-              <svg className="w-4 h-4" viewBox="0 0 16 16" fill="currentColor">
-                <use href="img_component_1_12.svg#icon" />
-              </svg>
-            </a>
-            <a href="#" className="bg-white rounded-full w-9 h-9 flex items-center justify-center">
-              <svg className="w-4 h-4" viewBox="0 0 16 16" fill="currentColor">
-                <use href="img_component_1_12.svg#icon" />
-              </svg>
-            </a>
-            <a href="#" className="bg-white rounded-full w-9 h-9 flex items-center justify-center">
-              <svg className="w-4 h-4" viewBox="0 0 16 16" fill="currentColor">
-                <use href="img_component_1_13.svg#icon" />
-              </svg>
-            </a>
-            <a href="#" className="bg-white rounded-full w-9 h-9 flex items-center justify-center">
-              <svg className="w-4 h-4" viewBox="0 0 16 16" fill="currentColor">
-                <use href="img_component_1_14.svg#icon" />
-              </svg>
-            </a>
+          {/* Social Icons */}
+          <div className="flex space-x-3 md:ml-auto">
+            {[...Array(6)].map((_, idx) => (
+              <div key={idx} className="bg-white rounded-full w-9 h-9 flex items-center justify-center">
+                <span className="text-black text-xs">icon</span>
+              </div>
+            ))}
           </div>
         </div>
 
-        <hr className="border-gray-600 my-8" />
+        <hr className="border-white-600 my-8" />
 
-        <div>
-          <p className="text-sm text-white">© Copyright 2025 Jhango – The best Shopify developers</p>
-        </div>
+        {/* Footer Bottom */}
+        <p className="text-left text-sm text-white">
+          © Copyright 2025 Jhango – The best Shopify developers
+        </p>
       </div>
     </footer>
   );

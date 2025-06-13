@@ -14,6 +14,7 @@ import MetricsSection from './MetricsSection';
 import CustomizationServices from './CustomizationServices';
 import QualitySection from './QualitySection';
 import TechnologySection from './TechnologySection';
+import TestimonialSection from './TestimonialSection';
 import FaqSection from './FaqSection';
 import PricingSection from './PricingSection';
 import { useLocation } from "react-router-dom";
@@ -53,6 +54,7 @@ const ShopifyExpertsLanding = () => {
         <CustomizationServices />
         <QualitySection />
         <TechnologySection />
+        <TestimonialSection/>
         <FaqSection />
         <PricingSection />
       </main>

@@ -46,10 +46,10 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-black shadow-md' : 'bg-black'}`}>
-      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div className="w-full mx-auto px-4 py-3 flex justify-between items-center max-w-[1440px]">
         <div className="flex items-center">
           <a href="/" className="text-white">
-            <img src="/images/shoplogo.jpg" alt="Logo" className="h-9 w-40" />
+            <img src="/images/shoplogo.jpg" alt="Logo" className="h-12 w-40 -ml-4" />
           </a>
         </div>
 
@@ -67,6 +67,12 @@ const Header = () => {
           >
             Portfolio
           </a>
+            <a
+            onClick={() => handleNavigateToSection('testimonials')}
+            className="flex items-center text-white font-semibold text-sm hover:text-gray-300 cursor-pointer"
+          >
+            Testimonials
+          </a>        
           <a
             onClick={() => handleNavigateToSection('plans')}
             className="flex items-center text-white font-semibold text-sm hover:text-gray-300 cursor-pointer"
@@ -79,7 +85,7 @@ const Header = () => {
         <div className="flex items-center space-x-4 hidden md:flex">
           <a
             href="/Contact"
-            className="flex items-center text-white font-semibold text-sm hover:text-gray-300 cursor-pointer border border-white py-2 px-4 rounded-lg"
+            className="flex items-center text-black bg-white font-semibold text-sm hover:text-gray-300 cursor-pointer border border-white py-2 px-4 rounded-lg"
           >
             Book a Call
           </a>
@@ -127,6 +133,12 @@ const Header = () => {
             >
               Portfolio
             </a>
+             <a
+              onClick={() => handleNavigateToSection('testimonials')}
+              className="text-white font-semibold text-lg hover:text-gray-300 cursor-pointer"
+            >
+              Testimonials
+            </a>
             <a
               onClick={() => handleNavigateToSection('plans')}
               className="text-white font-semibold text-lg hover:text-gray-300 cursor-pointer"
@@ -136,7 +148,7 @@ const Header = () => {
             {/* Move "Book a Call" and "Get Help on WhatsApp" to the mobile menu */}
             <a
               href="/Contact"
-              className="text-white font-semibold text-lg hover:text-gray-300 cursor-pointer border border-white py-2 px-4 rounded-lg"
+              className="text-black bg-white font-semibold text-lg hover:text-gray-300 cursor-pointer border border-white py-2 px-4 rounded-lg"
             >
               Book a Call
             </a>
